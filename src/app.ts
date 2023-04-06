@@ -1,8 +1,11 @@
 import express from 'express';
+import config from 'config'
+
+const port = config.get<number>('port')
 
 const app = express();
 
-app.listen(3000, async () => {
+app.listen(port, async () => {
     console.log('app start');
     
 })
